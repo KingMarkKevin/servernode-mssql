@@ -1,0 +1,27 @@
+{
+  "name": "relab-server",
+  "version": "1.0.0",
+  "description": "MSSQL",
+  "main": "app.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingMarkKevin/servernode-mssql.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KingMarkKevin/servernode-mssql/issues"
+  },
+  "homepage": "https://github.com/KingMarkKevin/servernode-mssql#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mssql": "^6.2.0",
+    "nodemon": "^2.0.3",
+    "proj4": "^2.6.1",
+    "wellknown": "^0.5.0"
+  }
+}
