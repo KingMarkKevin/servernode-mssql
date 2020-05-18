@@ -38,7 +38,7 @@ module.exports = class SqlUtils {
         let foglio = req.params.foglio;
         let q = `SELECT INDIRIZZO, WGS84_X, WGS84_Y, CLASSE_ENE, EP_H_ND, CI_VETTORE, FOGLIO, SEZ
         FROM [Katmai].[dbo].[interventiMilano]
-        WHERE FOGLIO = 90`
+        WHERE FOGLIO = ${foglio}`
         //eseguo la query e aspetto il risultato nella callback
        sqlRequest.query(q, (err, result) => {SqlUtils.sendCiVettResult(err,result,res)}); 
     }
