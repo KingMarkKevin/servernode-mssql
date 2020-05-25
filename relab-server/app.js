@@ -24,3 +24,9 @@ app.get('/ci_vettore/:foglio', function (req, res) {
     //richiamo il metodo che ottiene l'elenco dei vettori energetici
     sqlUtils.connect(req, res, sqlUtils.ciVettRequest);
  });
+
+ app.get('/ci_geovettore/:lng/:lat/:r', function (req, res) {
+    console.log(req.params);
+    //richiamo il metodo che ottiene l'elenco dei vettori energetici
+    sqlUtils.connect(req, res, sqlUtils.ciVettGeoRequest);
+ });
