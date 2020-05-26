@@ -69,15 +69,17 @@ export class AppComponent implements OnInit {
     this.zoom = 16;
   }
 
+  //Spiega qui
   cambiaFoglio(foglio) : boolean
   {
     let val = foglio.value; //Contiene il valore foglio
-    this.obsCiVett = this.http.get<Ci_vettore[]>(`https://3000-a917e09b-e5ff-4a44-89c1-4f7af5b96711.ws-eu01.gitpod.io/ci_vettore/${val}`);  //Commenta qui
+    this.obsCiVett = this.http.get<Ci_vettore[]>(`https://3000-a917e09b-e5ff-4a44-89c1-4f7af5b96711.ws-eu01.gitpod.io/ci_vettore/${val}`);
     this.obsCiVett.subscribe(this.prepareCiVettData); //Sottoscrivo all'obs
     console.log(val);
     return false;
   }
 
+  //Spiega qui
   mapClicked($event: MouseEvent) {
     this.circleLat = $event.coords.lat; //Queste sono le coordinate cliccate
     this.circleLng = $event.coords.lng; //Sposto il centro del cerchio qui
@@ -91,6 +93,7 @@ export class AppComponent implements OnInit {
     this.radius = newRadius;  //Ogni volta che modifico il cerchio, ne salvo il raggio
   }
 
+  //Spiega qui
   circleDoubleClicked(circleCenter)
   {
     console.log(circleCenter); //Voglio ottenere solo i valori entro questo cerchio
@@ -113,6 +116,8 @@ export class AppComponent implements OnInit {
     //Posso riusare lo stesso observable e lo stesso metodo di gestione del metodo
     //cambiaFoglio poichè riceverò lo stesso tipo di dati
     //Divido l'url andando a capo per questioni di leggibilità non perchè sia necessario
+
+    //Spiega qui
     this.obsCiVett = this.http.get<Ci_vettore[]>(`https://3000-a917e09b-e5ff-4a44-89c1-4f7af5b96711.ws-eu01.gitpod.io/ci_geovettore/
     ${this.circleLat}/
     ${this.circleLng}/

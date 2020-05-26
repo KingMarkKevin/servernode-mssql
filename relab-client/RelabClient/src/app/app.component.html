@@ -4,13 +4,15 @@
   <agm-data-layer [geoJson]="geoJsonObject" [style]="styleFunc">
   </agm-data-layer>
 
+  <!--Spiega qui-->
   <agm-circle [latitude]="circleLat" [longitude]="circleLng"
       [radius]="radius"
       [fillColor]="'red'"
       [circleDraggable]="true"
       [editable]="true"
+
       (radiusChange) = circleRedim($event)
-      (circleDblClick) = circleDoubleClicked($event)>
+      (circleDblClick) = circleDoubleClicked($event)> <!--Spiega qui-->
   </agm-circle>
 
   <agm-marker *ngFor="let m of markers" [latitude]="m.lat" [longitude]="m.lng" [label]="m.label"  [iconUrl]="m.icon">
@@ -18,6 +20,7 @@
 
 </agm-map>
 
+<!--Spiega qui-->
 <form>
   <h3 >Vettori energetici</h3>
   <div>

@@ -49,11 +49,14 @@ module.exports = class SqlUtils {
         res.send(result.recordset);  //Invio il risultato al Browser
   }
 
+  //Spiega qui
   static ciVettGeoRequest(req,res) {
         let sqlRequest = new sql.Request();  //sqlRequest: oggetto che serve a eseguire le query
         let x = Number(req.params.lng);
         let y = Number(req.params.lat);
         let r = Number(req.params.r);
+
+        //Spiega qui 
         let q = `SELECT INDIRIZZO, WGS84_X, WGS84_Y, CLASSE_ENE, EP_H_ND, CI_VETTORE, FOGLIO, SEZ
         FROM [Katmai].[dbo].[interventiMilano]
         WHERE WGS84_X > ${x} - ${r} AND 
