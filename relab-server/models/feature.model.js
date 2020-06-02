@@ -11,8 +11,10 @@ module.exports = class Feature{
 //Iniziamo a preparare la classe Properties che complicheremo in seguito
 class Properties
 {
-    constructor(id)
+    constructor(id, media, somma)
     {
         this.id = id;
+        this.media = media;
+        this.somma = somma;
     }
 }
